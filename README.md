@@ -85,11 +85,16 @@ app/src/main/java/com/nkusharora/smsforwarder/
 
 ## Building
 
-The Gradle wrapper JAR is intentionally not committed. To build:
+### CI (recommended)
+`.github/workflows/android.yml` builds the debug and unsigned-release APKs on every push and uploads them as workflow artifacts. To grab a build without installing anything locally:
 
+1. Push (or merge) to a branch matched by the workflow.
+2. Open the run in the GitHub Actions tab.
+3. Download the `smsforwarder-debug` artifact.
+4. `adb install smsforwarder-debug-debug.apk` (or transfer & install on the phone).
+
+### Local
 ```bash
-gradle wrapper --gradle-version 8.7   # generates ./gradlew
 ./gradlew assembleDebug
 ```
-
-…or just open the project in Android Studio Iguana+.
+The Gradle wrapper JAR is committed; you only need a JDK 17 and the Android SDK (Android Studio installs both for you).
