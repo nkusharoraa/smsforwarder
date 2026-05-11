@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SMS Forwarder</string>
+    <string name="instructions">For best reliability:\n\n1. Tap "Set as default SMS app" — this lets the app receive SMS_DELIVER, which cannot be aborted by other apps (the main reason bank/OTP SMS are dropped by other forwarders).\n2. Tap "Grant runtime permissions" and accept all prompts.\n3. Tap "Disable battery optimization" and choose "Allow".\n4. Enter the destination number with country code (e.g. +911234567890) and tap Save.\n\nNo sender filter is applied by default — every incoming SMS is forwarded.</string>
+</resources>

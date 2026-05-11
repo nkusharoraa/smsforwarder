@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurfaceVariant"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:textIsSelectable="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Destination phone number (with country code)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/destinationInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/enabledSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Forwarding enabled" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/includeSenderSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Include sender in forwarded message" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/includeSimSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Include SIM info in forwarded message" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Blocked sender substrings (comma-separated, optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/blockedInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save settings" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/defaultAppButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Set as default SMS app" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/permissionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Grant runtime permissions" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/batteryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Disable battery optimization" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/instructions"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
